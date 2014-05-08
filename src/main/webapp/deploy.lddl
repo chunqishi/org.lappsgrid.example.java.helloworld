@@ -1,7 +1,7 @@
 
 ///////////////////////<CUSTOMIZE>/////////////////////////////////
 def HOST = "127.0.0.1:8080"
-def SERVICE_WAR = "helloworld#0.0.1-SNAPSHOT.war"
+def SERVICE_WAR = "helloworld-0.0.1-SNAPSHOT.war"
 def SERVICE_PATH = "${SERVICE_WAR}".replaceAll(".war", "").replaceAll("#", "/")
 def SERVICE_CLASS = "HelloWorld"
 def ROOT = "http://${HOST}/${SERVICE_PATH}/services"
@@ -26,6 +26,11 @@ def NONE_ID = 'resource.id.none'
 
 def APACHE = 'Apache 2.0'
 def GPL = 'GPL'
+
+
+
+def COPYRIGHT = 'Copyright 2014 lapps.anc.org'
+def License = 'Apache License, Version 2.0'
 
 def urlWebService='https://raw.githubusercontent.com/chunqishi/lapps_lddl_brandeis/master/src/lddl-scripts/WebService.wsdl'
 def urlDataSource='https://raw.githubusercontent.com/chunqishi/lapps_lddl_brandeis/master/src/lddl-scripts/Datasource.wsdl'
@@ -371,9 +376,6 @@ resource {
     }
 }
 
-
-COPYRIGHT = 'Copyright 2014 lapps.anc.org'
-License = 'Apache License, Version 2.0'
 
 
 services = [
