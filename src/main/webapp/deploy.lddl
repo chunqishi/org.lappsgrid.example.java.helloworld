@@ -12,6 +12,8 @@ def SERVICE_WSDL = "${SERVICE_URL}?wsdl"
 def DATABASE='langrid'
 def ROLENAME='langrid'
 def PASSWORD='langrid'
+
+def IS_DUPLICATE = false
 ///////////////////////</CUSTOMIZE>/////////////////////////////////
 
 
@@ -39,19 +41,22 @@ def urlDataSource='https://raw.githubusercontent.com/chunqishi/lapps_lddl_brande
 
 
 ///////////////////////<DOMAIN>/////////////////////////////////
-/**
+if ( ! IS_DUPLICATE ) {
+
 domain {
-	id DOMAIN
-	name 'Natural Language Processing'
-	description 'NLP tasks related to LAPPS.'
+    id DOMAIN
+    name 'Natural Language Processing'
+    description 'NLP tasks related to LAPPS.'
 }
 news "Domain added: ${DOMAIN}"
-**/
+
+}
 ///////////////////////</DOMAIN>/////////////////////////////////
 
 
 ///////////////////////<PROTOCOL>/////////////////////////////////
-/**
+if ( ! IS_DUPLICATE ) {
+
 protocol {
 	id 'SOAP_RPC_ENCODED'
 	name 'SOAP RPC Encoded'
@@ -63,16 +68,18 @@ protocol {
     name 'REST'
     description 'RESTful web services.'
 }
-**/
+
+} //IS_DUPLICATE
 ///////////////////////</PROTOCOL>/////////////////////////////////
 
 
 
 ///////////////////////<RESOURCE>/////////////////////////////////
-/**
 LANG = 'resource.meta.lang'
 SIZE = 'resource.meta.size'
 UNIT = 'resource.meta.unit'
+
+if ( ! IS_DUPLICATE ) {
 
 resourceMetaAttribute {
 	id LANG
@@ -133,7 +140,9 @@ resourceType {
 
 
 news 'LAPPS resources have been registered.'
-**/
+
+} //IS_DUPLICATE
+
 ///////////////////////</RESOURCE>/////////////////////////////////
 
 
@@ -142,7 +151,9 @@ news 'LAPPS resources have been registered.'
 
 LANG='service.meta.lang'
 TYPE='service.meta.type'
-/**
+
+if ( ! IS_DUPLICATE ) {
+
 serviceMetaAttribute {
 	id LANG
 	name 'Service language'
@@ -184,7 +195,9 @@ serviceType {
 }
 
 news 'LAPPS service types and attributes have been registered.'
-**/
+
+} //IS_DUPLICATE
+
 ///////////////////////</SERVICE>/////////////////////////////////
 
 ///////////////////////<INTERFACE>/////////////////////////////////
@@ -363,7 +376,8 @@ database {
 
 
 ///////////////////////<USER>/////////////////////////////////
-/**
+if ( ! IS_DUPLICATE ) {
+
 user {
     id 'tester'
     password 'tester'
@@ -375,11 +389,13 @@ user {
 }
 
 news 'Registered test user.'
-**/
+
+} //IS_DUPLICATE
+
 ///////////////////////</USER>/////////////////////////////////
 
 ///////////////////////<SERVICES>/////////////////////////////////
-/**
+if ( ! IS_DUPLICATE ) {
 
 resource {
     id NONE_ID
@@ -393,7 +409,10 @@ resource {
     	lang 'none'
     }
 }
-**/
+
+} //IS_DUPLICATE
+
+
 
 
 services = [
