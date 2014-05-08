@@ -398,7 +398,7 @@ resource {
 
 services = [
     [
-      id:'${SERVICE_CLASS}.v${VERSION}',
+      id:"${SERVICE_CLASS}.v${VERSION}",
       name:"${SERVICE_CLASS} (v${VERSION})",
       url:"${ROOT}/${SERVICE_CLASS}",
       desc:"LappsGrid ${SERVICE_CLASS}",
