@@ -59,9 +59,9 @@ protocol {
 
 
 ///////////////////////<RESOURCE>/////////////////////////////////
-def LANG = 'resource.meta.lang'
-def SIZE = 'resource.meta.size'
-def UNIT = 'resource.meta.unit'
+LANG = 'resource.meta.lang'
+SIZE = 'resource.meta.size'
+UNIT = 'resource.meta.unit'
 
 resourceMetaAttribute {
 	id LANG
@@ -129,8 +129,8 @@ news 'LAPPS resources have been registered.'
 
 ///////////////////////<SERVICE>/////////////////////////////////
 
-def LANG='service.meta.lang'
-def TYPE='service.meta.type'
+LANG='service.meta.lang'
+TYPE='service.meta.type'
 
 serviceMetaAttribute {
 	id LANG
@@ -169,9 +169,9 @@ news 'LAPPS service types and attributes have been registered.'
 ///////////////////////</SERVICE>/////////////////////////////////
 
 ///////////////////////<INTERFACE>/////////////////////////////////
-def wsdlWebService='WebService.wsdl'
-def wsdlDataSource='Datasource.wsdl'
-def wsdlOtherService='OtherService.wsdl'
+wsdlWebService='WebService.wsdl'
+wsdlDataSource='Datasource.wsdl'
+wsdlOtherService='OtherService.wsdl'
 
 
 // Update to absolute path.
