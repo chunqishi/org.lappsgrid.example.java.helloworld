@@ -1,0 +1,51 @@
+include 'Setup'
+include 'Common'
+include 'Database'
+include 'Servers'
+include 'Database'
+include 'Common'
+include 'Functions'
+#include 'Users'
+
+
+def HOST = "127.0.0.1:8080"
+def SERVICE_WAR = "helloworld#0.0.1-SNAPSHOT.war"
+def SERVICE_PATH = "${SERVICE_WAR}".replaceAll(".war", "").replaceAll("#", "/")
+def SERVICE_CLASS = "HelloWorld"
+def ROOT = "http://${HOST}/${SERVICE_PATH}/services"
+
+resource {
+    id NONE_ID
+    copyright COPYRIGHT
+    license APACHE
+    description 'A resource for services that do not require a resource.'
+    name 'None'
+    domain DOMAIN
+    type NONE_TYPE
+    attributes {
+    	lang 'none'
+    }
+}
+
+
+COPYRIGHT = 'Copyright 2014 lapps.anc.org'
+License = 'Apache License, Version 2.0'
+
+
+services = [
+    [
+      id:'${SERVICE_CLASS}.v${VERSION}',
+      name:"${SERVICE_CLASS} (v${VERSION})",
+      url:"${ROOT}/${SERVICE_CLASS}",
+      desc:"LappsGrid ${SERVICE_CLASS}",
+      lang:'(English)',
+      license:License
+    ],
+]
+
+services.each {
+    comment it.name
+    register_service(it)
+}
+
+news 'The LAPPS node has been configured via LDDL'
