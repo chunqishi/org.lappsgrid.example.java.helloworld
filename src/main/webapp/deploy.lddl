@@ -69,6 +69,7 @@ protocol {
 
 
 ///////////////////////<RESOURCE>/////////////////////////////////
+/**
 LANG = 'resource.meta.lang'
 SIZE = 'resource.meta.size'
 UNIT = 'resource.meta.unit'
@@ -132,7 +133,7 @@ resourceType {
 
 
 news 'LAPPS resources have been registered.'
-
+**/
 ///////////////////////</RESOURCE>/////////////////////////////////
 
 
@@ -141,7 +142,7 @@ news 'LAPPS resources have been registered.'
 
 LANG='service.meta.lang'
 TYPE='service.meta.type'
-
+/**
 serviceMetaAttribute {
 	id LANG
 	name 'Service language'
@@ -173,6 +174,16 @@ serviceType {
 	description 'LAPPS web services.'
 	attributes LANG, TYPE
 }
+**/
+
+serviceType {
+	id OTHER_SERVICE
+	name 'Other Web Service'
+	domain DOMAIN
+	description 'Other web services.'
+	attributes LANG, TYPE
+}
+
 
 
 news 'LAPPS service types and attributes have been registered.'
