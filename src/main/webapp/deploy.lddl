@@ -174,7 +174,6 @@ serviceType {
 	description 'LAPPS web services.'
 	attributes LANG, TYPE
 }
-**/
 
 serviceType {
 	id OTHER_SERVICE
@@ -184,9 +183,8 @@ serviceType {
 	attributes LANG, TYPE
 }
 
-
-
 news 'LAPPS service types and attributes have been registered.'
+**/
 ///////////////////////</SERVICE>/////////////////////////////////
 
 ///////////////////////<INTERFACE>/////////////////////////////////
