@@ -379,6 +379,8 @@ news 'Registered test user.'
 ///////////////////////</USER>/////////////////////////////////
 
 ///////////////////////<SERVICES>/////////////////////////////////
+/**
+
 resource {
     id NONE_ID
     copyright COPYRIGHT
@@ -391,7 +393,7 @@ resource {
     	lang 'none'
     }
 }
-
+**/
 
 
 services = [
