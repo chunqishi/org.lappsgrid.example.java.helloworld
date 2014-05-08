@@ -39,16 +39,19 @@ def urlDataSource='https://raw.githubusercontent.com/chunqishi/lapps_lddl_brande
 
 
 ///////////////////////<DOMAIN>/////////////////////////////////
+/**
 domain {
 	id DOMAIN
 	name 'Natural Language Processing'
 	description 'NLP tasks related to LAPPS.'
 }
 news "Domain added: ${DOMAIN}"
+**/
 ///////////////////////</DOMAIN>/////////////////////////////////
 
 
 ///////////////////////<PROTOCOL>/////////////////////////////////
+/**
 protocol {
 	id 'SOAP_RPC_ENCODED'
 	name 'SOAP RPC Encoded'
@@ -60,6 +63,7 @@ protocol {
     name 'REST'
     description 'RESTful web services.'
 }
+**/
 ///////////////////////</PROTOCOL>/////////////////////////////////
 
 
